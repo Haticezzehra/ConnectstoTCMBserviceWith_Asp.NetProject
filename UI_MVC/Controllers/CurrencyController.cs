@@ -124,6 +124,7 @@ namespace UI_MVC.Controllers
                 currency.BanknoteSelling = model.BanknoteSelling;
                 currency.ForexBuying = model.ForexBuying;
                 currency.ForexSelling = model.ForexSelling;
+                currency.Time = DateTime.Now;
                 currencydal.Update(currency);
 
 
