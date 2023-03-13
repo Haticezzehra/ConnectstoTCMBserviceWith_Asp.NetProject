@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrencyConsole
+namespace Console
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-             while (true)
+            while (true)
             {
                 SourceCurrency.currencySource();
                 Thread.Sleep(1000 * 60 * 5);

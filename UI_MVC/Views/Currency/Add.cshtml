@@ -1,0 +1,36 @@
+﻿@model UI_MVC.Models.Domain.Forex
+
+
+<h1>ADD CURRENCY</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">Currency Code</label>
+        <input type="text" class="form-control" asp-for="CurrencyCode">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Unit</label>
+        <input type="text" class="form-control" asp-for="Unit">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">CurrencyName</label>
+        <input type="text" class="form-control" asp-for="CurrencyName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ForexBuying</label>
+        <input type="text" class="form-control" asp-for="ForexBuying">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ForexSelling</label>
+        <input type="text" class="form-control" asp-for="ForexSelling">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">BanknoteBuying</label>
+        <input type="text" class="form-control" asp-for="BanknoteBuying">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">BanknoteSelling</label>
+        <input type="text" class="form-control" asp-for="BanknoteSelling">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

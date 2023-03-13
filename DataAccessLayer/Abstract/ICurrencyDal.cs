@@ -1,5 +1,4 @@
-﻿using Core.DataAccess;
-using Entitiess;
+﻿using Entitiess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    
-        public interface ICurrencyDal : IEntityRepository<Currency>
-        {
-        }
-    
+
+    public interface ICurrencyDal : IEntityRepository<Currency>
+    {
+    }
+
 }

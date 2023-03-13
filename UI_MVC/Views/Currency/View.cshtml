@@ -1,0 +1,44 @@
+﻿@model UpdateCurrencyViewModel
+<h1>Update Currencies</h1>
+
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" asp-for="ID" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Currency Code</label>
+        <input type="text" class="form-control" asp-for="CurrencyCode">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Unit</label>
+        <input type="text" class="form-control" asp-for="Unit">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">CurrencyName</label>
+        <input type="text" class="form-control" asp-for="CurrencyName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ForexBuying</label>
+        <input type="text" class="form-control" asp-for="ForexBuying">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ForexSelling</label>
+        <input type="text" class="form-control" asp-for="ForexSelling">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">BanknoteBuying</label>
+        <input type="text" class="form-control" asp-for="BanknoteBuying">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">BanknoteSelling</label>
+        <input type="text" class="form-control" asp-for="BanknoteSelling">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Time</label>
+        <input type="text" class="form-control" asp-for="Time">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Currency">Delete</button>
+</form>
