@@ -19,21 +19,17 @@ namespace Console
             List<Currency> forexList;
             CurrencyDal currencyDal = new CurrencyDal();
             forexList = currencyDal.GetAll();
-            
+
             var requestXml = new XmlDocument();
             var responseXml = new XmlDocument();
             var httpRequest = HttpWebRequest.Create("https://www.tcmb.gov.tr/kurlar/today.xml");
-            // set appropriate headers
+
             httpRequest.Method = "POST";
             httpRequest.ContentType = "text/xml";
 
             using (var response = (HttpWebResponse)httpRequest.GetResponse())
             {
                 var responseStream = response.GetResponseStream(); //??
-            
-                // may want to check response.StatusCode to
-                // see if the request was successful
-
                 responseXml = new XmlDocument();
                 responseXml.Load(responseStream);
             }
