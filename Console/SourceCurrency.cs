@@ -19,28 +19,26 @@ namespace Console
             List<Currency> forexList;
             CurrencyDal currencyDal = new CurrencyDal();
             forexList = currencyDal.GetAll();
-            // CurrencyManager manager = new CurrencyManager(currencyDal);
-            // forexList = manager.GetAll();
-            // build XML request
+            
             var requestXml = new XmlDocument();
             var responseXml = new XmlDocument();
             var httpRequest = HttpWebRequest.Create("https://www.tcmb.gov.tr/kurlar/today.xml");
             // set appropriate headers
             httpRequest.Method = "POST";
             httpRequest.ContentType = "text/xml";
-            using (var requestStream = httpRequest.GetRequestStream())
-            {
-                requestXml.Save(requestStream);
-            }
+
             using (var response = (HttpWebResponse)httpRequest.GetResponse())
-            using (var responseStream = response.GetResponseStream())
             {
+                var responseStream = response.GetResponseStream(); //??
+            
                 // may want to check response.StatusCode to
                 // see if the request was successful
 
                 responseXml = new XmlDocument();
                 responseXml.Load(responseStream);
             }
+
+
             foreach (XmlNode node in responseXml.SelectNodes("Tarih_Date")[0].ChildNodes)
             {
                 var rate = currencyDal.GetAll().FirstOrDefault(r => r.CurrencyCode == node.Attributes["CurrencyCode"].Value);
