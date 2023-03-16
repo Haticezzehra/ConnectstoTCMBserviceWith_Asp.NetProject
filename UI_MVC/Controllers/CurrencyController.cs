@@ -6,15 +6,14 @@ using System.Xml.Linq;
 using UI_MVC.Models.Domain;
 using UI_MVC.Models;
 
+
 namespace UI_MVC.Controllers
 {
     public class CurrencyController : Controller
     {
-
         CurrencyDal currencydal = new CurrencyDal();
 
 
-        //  [HttpPost]
         public IActionResult GetAllCurrency()
         {
             List<Forex> forex = new List<Forex>();

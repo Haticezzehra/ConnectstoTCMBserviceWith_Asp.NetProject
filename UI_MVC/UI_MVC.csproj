@@ -19,8 +19,4 @@
     <ProjectReference Include="..\Entitiees\Entitiees.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Home\" />
-  </ItemGroup>
-
 </Project>
