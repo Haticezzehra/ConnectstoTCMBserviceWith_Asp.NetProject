@@ -12,8 +12,6 @@ namespace UI_MVC.Controllers
     public class CurrencyController : Controller
     {
         CurrencyDal currencydal = new CurrencyDal();
-
-
         public IActionResult GetAllCurrency()
         {
             List<Forex> forex = new List<Forex>();
@@ -78,8 +76,6 @@ namespace UI_MVC.Controllers
             return RedirectToAction("GetAllCurrency");
         }
 
-
-
         [HttpGet]
         public async Task<IActionResult> View(int id)
         {
@@ -105,7 +101,6 @@ namespace UI_MVC.Controllers
                 return await Task.Run(() => View("View", viewModel));
             }
             return RedirectToAction("Index");
-
         }
 
 
