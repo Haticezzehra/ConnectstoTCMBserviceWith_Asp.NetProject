@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entitiess
 {
-    public class Currency:IEntity
+    public class Currency
     {
         public int ID { get; set; }
         public string CurrencyCode { get; set; }
